@@ -18,7 +18,7 @@ Prepare-TypeC
 
 # 마지막으로..
 
-
+![링컨](./image/링컨.png)
 
 
 
