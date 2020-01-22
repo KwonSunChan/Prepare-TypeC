@@ -10,7 +10,7 @@ Prepare-TypeC
 |:---------:|
 
 ##### 예시코드
-~~~
+```c++
 class Stack {	
 private:
 	int top;
@@ -20,7 +20,7 @@ private:
 public :
 	Stack() {
 		top = 0;
-		size = 31;
+		size = 40;
 
 	}
 
@@ -44,7 +44,7 @@ public :
 	}
 };
 
-~~~
+```
 
 
 
