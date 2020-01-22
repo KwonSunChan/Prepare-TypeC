@@ -4,7 +4,47 @@ Prepare-TypeC
 
 ### 1. 자료구조
 #### 1-1. Stack
-> 
+> 먼저 들어간 데이터가 나중에 나오는 자료구조
+| ![스택](./image/stack.png) |
+|:---------:|
+
+##### 예시코드
+~~~
+class Stack {	
+private:
+	int top;
+	int size;
+	int arr[40];
+
+public :
+	Stack() {
+		top = 0;
+		size = 31;
+
+	}
+
+	void push(int c) {
+		
+		if (top < size) {
+			arr[top++] = int(c);
+		}
+	}
+
+	int pop() {
+		int val = -1;
+		if (!isEmpty()) {
+			val = arr[--top];
+		}
+		return val;
+	}
+
+	bool isEmpty() {
+		return top == 0;
+	}
+};
+
+~~~
+
 
 
 
