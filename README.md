@@ -68,36 +68,45 @@ public :
 
 ##### 예시코드
 ```c++
-class Stack {	
+class Queue {
 private:
-	int top;
+	int front;
+	int rear;
+	int arr[100000];
 	int size;
-	int arr[40];
 
-public :
-	Stack() {
-		top = 0;
-		size = 40;
-
+public:
+	Queue() {
+		size = 100000;
+		front = 0;
+		rear = 1;
 	}
-
-	void push(int c) {
-		
-		if (top < size) {
-			arr[top++] = int(c);
-		}
-	}
-
-	int pop() {
-		int val = -1;
-		if (!isEmpty()) {
-			val = arr[--top];
-		}
-		return val;
-	}
-
 	bool isEmpty() {
-		return top == 0;
+		return ((size + rear) - front) % size == 1;
+	}
+	bool isFull() {
+		return front == rear;
+	}
+	void add(int i) {
+		if (!isFull()) {
+			arr[rear] = i;
+			rear = (rear + 1) % size;
+		}
+	}
+	int remove() {
+		int value = -11111111;
+		if (!isEmpty()) {
+			front = (front + 1) % size;
+			value = arr[front];
+		}
+		return value;
+	}
+	int peek() {
+		int value = -11111111;
+		if (!isEmpty()) {
+			value = arr[(front + 1) % size];
+		}
+		return value;
 	}
 };
 
