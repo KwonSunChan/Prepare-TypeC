@@ -52,6 +52,7 @@ public :
 };
 
 ```
+--------------------
 
 #### 1-2. Queue  
 > 먼저 들어간 데이터가 먼저 나오는 구조
@@ -62,9 +63,46 @@ public :
 >	 - 큐의 앞 부분이 비어도 데이터를 삽입할 수 없다. => 메모리 낭비, 관리의 어려움
 >	 - 큐가 Empty여도 Not Empty라 판단할 수 있다. => 추가적인 조치사항이 필요하다. 구현의 어려움
 
+| ![큐](./image/Queue.png) |
+|:---------:|
 
+##### 예시코드
+```c++
+class Stack {	
+private:
+	int top;
+	int size;
+	int arr[40];
 
+public :
+	Stack() {
+		top = 0;
+		size = 40;
 
+	}
+
+	void push(int c) {
+		
+		if (top < size) {
+			arr[top++] = int(c);
+		}
+	}
+
+	int pop() {
+		int val = -1;
+		if (!isEmpty()) {
+			val = arr[--top];
+		}
+		return val;
+	}
+
+	bool isEmpty() {
+		return top == 0;
+	}
+};
+
+```
+--------------------
 
 
 
