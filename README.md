@@ -128,6 +128,9 @@ public:
 >	 - 포인터 부분을 모든 데이터마다 가지고 있어야 해서 같은 크기의 배열보다 메모리 낭비가 있다.
 >	 - 원하는 데이터의 검색이 느리다.
 >	 - 구현의 어려움. 
+> 1. 추천 알고리즘 문제
+>	 - https://www.acmicpc.net/problem/1158  요세푸스 문제  
+>	 - https://www.acmicpc.net/problem/2983  개구리 공주  
 
 | ![단순 연결 리스트](./image/SimpleLinkedList.png) |
 |:---------:|
@@ -135,47 +138,8 @@ public:
 
 ##### 예시코드
 ```c++
-class Queue {
-private:
-	int front;
-	int rear;
-	int arr[100000];
-	int size;
 
-public:
-	Queue() {
-		size = 100000;
-		front = 0;
-		rear = 1;
-	}
-	bool isEmpty() {
-		return ((size + rear) - front) % size == 1;
-	}
-	bool isFull() {
-		return front == rear;
-	}
-	void add(int i) {
-		if (!isFull()) {
-			arr[rear] = i;
-			rear = (rear + 1) % size;
-		}
-	}
-	int remove() {
-		int value = -11111111;
-		if (!isEmpty()) {
-			front = (front + 1) % size;
-			value = arr[front];
-		}
-		return value;
-	}
-	int peek() {
-		int value = -11111111;
-		if (!isEmpty()) {
-			value = arr[(front + 1) % size];
-		}
-		return value;
-	}
-};
+
 
 ```
 
