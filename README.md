@@ -131,7 +131,7 @@ public:
 
 | ![단순 연결 리스트](./image/SimpleLinkedList.png) |
 |:---------:|
-| ![이중 연결 리스트](./image/DoublyLinkedList.png) |
+| ![이중 연결 리스트](./image/doublyLinkedList.png) |
 
 ##### 예시코드
 ```c++
