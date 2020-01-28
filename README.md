@@ -66,7 +66,7 @@ public :
 >	 - 큐의 앞 부분이 비어도 데이터를 삽입할 수 없다. => 메모리 낭비, 관리의 어려움
 >	 - 큐가 Empty여도 Not Empty라 판단할 수 있다. => 추가적인 조치사항이 필요하다. 구현의 어려움
 > 1. 추천 알고리즘 문제
->	 - https://www.acmicpc.net/problem/2905  홍준이와 
+>	 - https://www.acmicpc.net/problem/2905  홍준이와 울타리  
 
 | ![큐](./image/Queue.png) |
 |:---------:|
