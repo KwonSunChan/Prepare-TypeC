@@ -129,8 +129,9 @@ public:
 >	 - 원하는 데이터의 검색이 느리다.
 >	 - 구현의 어려움. 
 
-| ![연결 리스트](./image/Queue.png) |
+| ![단순 연결 리스트](./image/SimpleLinkedList.png) |
 |:---------:|
+| ![이중 연결 리스트](./image/DoublyLinkedList.png) |
 
 ##### 예시코드
 ```c++
