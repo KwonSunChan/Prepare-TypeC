@@ -138,7 +138,45 @@ public:
 
 ##### 예시코드
 ```c++
+class Linked_List {
+public:
+	int item;
 
+	Linked_List* next;
+	Linked_List* prev;
+};
+
+class Linked {
+private:
+	Linked_List* head;
+	Linked_List* idx;
+public:
+	Linked() {
+		head = new Linked_List();
+		idx = head;
+	}
+
+	void add(int val) {
+		Linked_List* item = new Linked_List();
+		item->item = val;
+		idx->next = item;
+		item->prev = idx;
+		idx = idx->next;
+
+	}
+
+	void inserEnd() {
+		idx->next = head->next;
+		head->next->prev = idx;
+		head->prev = idx;
+		idx = head;
+	}
+
+	Linked_List* getIdx() {
+		return idx;
+	}
+
+};
 
 
 ```
