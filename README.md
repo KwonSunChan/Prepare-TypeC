@@ -138,26 +138,26 @@ public:
 
 ##### 예시코드
 ```c++
-class Linked_List {
+class Link {
 public:
 	int item;
 
-	Linked_List* next;
-	Linked_List* prev;
+	Link* next;
+	Link* prev;
 };
 
-class Linked {
+class Linked_List {
 private:
-	Linked_List* head;
-	Linked_List* idx;
+	Link* head;
+	Link* idx;
 public:
-	Linked() {
-		head = new Linked_List();
+	Linked_List() {
+		head = new Link();
 		idx = head;
 	}
 
 	void add(int val) {
-		Linked_List* item = new Linked_List();
+		Link* item = new Link();
 		item->item = val;
 		idx->next = item;
 		item->prev = idx;
@@ -172,12 +172,11 @@ public:
 		idx = head;
 	}
 
-	Linked_List* getIdx() {
+	Link* getIdx() {
 		return idx;
 	}
 
 };
-
 
 ```
 
