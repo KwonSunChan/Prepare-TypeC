@@ -182,7 +182,61 @@ public:
 
 -------------------------
 ### 2. 알고리즘
+#### 2-1. 완전탐색( 브루트 포스)
+> 최적의 해를 찾기 위해 모든 경우의 수를 보는 알고리즘  
+> 반복문을 이용해서 모든 경우의 수를 확인하여도 되지만, 재귀를 이용하는 것이 더 쉽다.  
+> 1. 장점  
+>	 - 정답을 얻는 확실한 방법  
+>	 - 백트래킹을 이용하면 성능을 향상시킬 수 있다.  
+> 1. 단점  
+>	 - 재귀 구현에 대한 부담감.  
+>	 - 모든 경우를 보기 때문에 데이터가 많아 질수록 많이 느려진다.   
+>	 - 많은 재귀를 통해서 메모리가 느려지고, 너무 많은 경우 메모리 문제로 재귀로 구현이 힘들다.
+> 1. 추천 알고리즘 문제
+>	 - https://www.acmicpc.net/problem/2915  로마 숫자 재배치 
+>	 - https://www.acmicpc.net/problem/2137  가장 가까운 분수
 
+| ![스택](./image/stack.png) |
+|:---------:|
+
+##### 예시코드
+```c++
+class Stack {	
+private:
+	int top;
+	int size;
+	int arr[40];
+
+public :
+	Stack() {
+		top = 0;
+		size = 40;
+
+	}
+
+	void push(int c) {
+		
+		if (top < size) {
+			arr[top++] = int(c);
+		}
+	}
+
+	int pop() {
+		int val = -1;
+		if (!isEmpty()) {
+			val = arr[--top];
+		}
+		return val;
+	}
+
+	bool isEmpty() {
+		return top == 0;
+	}
+};
+
+```
+
+--------------------
 
 
 
