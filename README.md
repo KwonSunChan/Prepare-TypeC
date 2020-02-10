@@ -401,8 +401,92 @@ public:
 
 --------------------
 
+## 참고 자료   
+
+### 팩토리얼  
+> 1. 자연수의 계승은 그 수보다 작거나 같은 모든 양의 정수의 곱이다.
+
+#### 예시코드
+```c++
+
+#define LONG long long
+
+LONG factorial(int index) {
+
+	if (index <= 1) { return 1; }
+
+	// Memorization
+	if (answer[index] > 1) { return answer[index]; }
+
+	answer[index] = index * factorial(index - 1);
+
+	return answer[index];
+}
+
+```
 
 
+### 최대 공약수  
+> 1. 정수들의 공약수는 동시에 그들 모두의 약수인 정수이다. 최대 공약수는 가증 큰 하나
+
+#### 예시코드
+```c++
+
+/* Reculsive greatest Common Divisor - (logN) */
+int GCD(int a, int b) {
+
+	if (b == 0) { return a; }
+	else { return GCD(b, a%b); }
+}
+
+/* Loop greatest Common Divisor - (logN) */
+int GCD(int a, int b) {
+
+	while (b != 0) {
+		const int r = a % b;
+		a = b;
+		b = r;
+	}
+
+	return a;
+}
+
+```
+
+### 소수들의 집합  
+> 1. 소수들의 집합을 구하는 방법중에 에라토스테네스의 체라는 것이 있다. 
+
+#### 예시코드
+```c++
+
+/* Sieve of Eratoshenes */
+void SoE(const int n, const int m) {
+
+  int pn = 0; // 소수의 개수
+
+  vector<int>	prime; // 소수 저장
+  vector<bool> check = vector<bool>(n + 1, false); // 소수 확인
+
+	for (long long ii = 2; ii <= n; ii++) {
+
+		if (check.at(ii) == false) {
+			pn++;
+			prime.push_back(ii);
+
+			for (long long jj = ii * ii; jj <= n; jj += ii) {
+				check[jj] = true;
+			}
+		}
+	}
+}
+
+```
+| ![Eratosthenes](./image/Eratosthenes.png) |
+|:---------:|
+
+
+
+-------------------
 # 마지막으로..
 
 
