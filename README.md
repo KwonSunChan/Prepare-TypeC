@@ -481,7 +481,7 @@ void SoE(const int n, const int m) {
 }
 
 ```
-| ![Eratosthenes](./image/Eratosthenes.png) |
+| ![Eratosthenes](./image/Eratosthenes.gif) |
 |:---------:|
 
 
