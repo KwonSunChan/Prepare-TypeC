@@ -6,7 +6,7 @@ A형 대비
 
 ### 1. cin/cout 대신에 scanf/printf 사용
 
-입출력 함수의 성능차이가 많이 나기 때문에 scanf/printf를 사용하자
+입출력 함수의 성능차이가 많이 나기 때문에 scanf/printf를 사용하자  
 Java의 경우 BufferedReader/BufferedWriter 를 사용해 보자
 
 ### 2. C로 풀더라도 CPP 컴파일러를 사용하자
